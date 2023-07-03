@@ -2,6 +2,7 @@
 #include <array>
 #include <vector>
 #include<deque>
+#include<list>
 
 using namespace std;
 
@@ -102,4 +103,24 @@ int main()
     cout<<d.size()<<endl;
     cout<<d.max_size()<<endl;
     // cout<<d.__capacity()<<endl;
+
+
+    
+    //list
+
+
+    list<int> l;
+    l.push_back(1);
+    l.push_front(2);
+
+    cout<< "Size: "<<l.size()<<endl;
+    for (int i:l){
+        cout<<i<<endl;
+    }
+    l.erase(l.begin());
+    for (int i:l){
+        cout<<i<<endl;
+    }
+    cout<<"Size: "<<l.size()<<endl;
+
 }
