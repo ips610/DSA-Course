@@ -3,6 +3,7 @@
 #include <vector>
 #include<deque>
 #include<list>
+#include<stack>
 
 using namespace std;
 
@@ -122,5 +123,22 @@ int main()
         cout<<i<<endl;
     }
     cout<<"Size: "<<l.size()<<endl;
+
+
+
+    //stack
+
+
+    stack<string> s;
+    s.push("IPS");
+    s.push("GPS");
+    s.push("AK");
+    cout<<"Size: "<<s.size()<<endl;
+    cout<<"Top is: "<<s.top()<<endl;
+    s.pop();
+    cout<<"Top is: "<<s.top()<<endl;
+    cout<<"Size: "<<s.size()<<endl;
+
+
 
 }
