@@ -7,6 +7,7 @@
 #include<queue>
 #include<set>
 #include<map>
+#include<algorithm>
 
 using namespace std;
 
@@ -267,7 +268,7 @@ int main()
         cout<<i.first<<" "<<i.second<<endl;
     }
 
-    auto it=m.find(3);
+    // auto it=m.find(3);
     // for (auto i=it;i!=m.end();i++){
     //     cout<<(*i).first<<endl;
     // }
@@ -286,4 +287,36 @@ int main()
     cout<<"Finding 13: "<<mm.count(13)<<endl;
 
 
+
+    //algorithm
+
+
+
+    vector<int> vv;
+    vv.push_back(1);
+    vv.push_back(3);
+    vv.push_back(6);
+    vv.push_back(7);
+
+    cout<<"Finding 6: "<<binary_search(vv.begin(),vv.end(),6)<<endl;
+    cout<<"Finding 5: "<<binary_search(vv.begin(),vv.end(),5)<<endl;
+
+
+    cout<<"Lower Bound: "<<lower_bound(vv.begin(),vv.end(),6)-vv.begin()<<endl;
+    cout<<"Upper Bound: "<<upper_bound(vv.begin(),vv.end(),6)-vv.begin()<<endl;
+
+    int a=3;
+    int b=5;
+
+    // cout<<"Max: "<< max(a,b);
+    // cout<<"Min: "<< min(a,b);
+
+    // cout<<"Swap: "<<swap(a,b)<<a<<b<<endl;
+
+    string abcd="abcd";
+    reverse(abcd.begin(),abcd.end());
+
+    cout<<"Reversed String: "<<abcd;
+
+    
 }
