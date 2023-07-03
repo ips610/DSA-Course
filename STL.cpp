@@ -156,4 +156,38 @@ int main()
     q.pop();
     cout<<"Size: "<<q.size()<<endl;
     cout<<"Front is: "<<q.front()<<endl;
+
+
+    //priority queue
+
+
+    priority_queue<int> maxi; //greatest element will return first -- max heap
+    priority_queue<int,vector<int>, greater<int> > mini; //smallest element will return first -- min heap
+
+    maxi.push(1);
+    maxi.push(5);
+    maxi.push(3);
+    maxi.push(0);
+
+    int maxisize=maxi.size();
+    for (int i=0;i<maxisize;i++){
+        cout<<maxi.top()<<" ";
+        maxi.pop();
+    }
+    cout<<endl;
+
+    mini.push(1);
+    mini.push(5);
+    mini.push(3);
+    mini.push(0);
+
+    int minisize=mini.size();
+    for (int i=0;i<minisize;i++){
+        cout<<mini.top()<<" ";
+        mini.pop();
+    }
+    
+    cout<<endl;
+
+    
 }
