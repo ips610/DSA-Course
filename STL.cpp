@@ -4,6 +4,7 @@
 #include<deque>
 #include<list>
 #include<stack>
+#include<queue>
 
 using namespace std;
 
@@ -141,4 +142,18 @@ int main()
 
 
 
+    //queue
+
+
+    queue<string> q;
+
+    q.push("IPS");
+    q.push("GPS");
+    q.push("AK");
+
+    cout<<"Size: "<<q.size()<<endl;
+    cout<<"Front is: "<<q.front()<<endl;
+    q.pop();
+    cout<<"Size: "<<q.size()<<endl;
+    cout<<"Front is: "<<q.front()<<endl;
 }
