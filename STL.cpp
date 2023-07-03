@@ -5,6 +5,7 @@
 #include<list>
 #include<stack>
 #include<queue>
+#include<set>
 
 using namespace std;
 
@@ -189,5 +190,55 @@ int main()
     
     cout<<endl;
 
+
+    //set
+
+
+    set<int> ss;
+    ss.insert(5);
+    ss.insert(1);
+    ss.insert(6);
+    ss.insert(0);
+
+    for (auto i: ss){
+        cout<<i<<" ";
+    }
+    cout<<endl;
+
+    set<int> ss1;
+    ss1.insert(5);
+    ss1.insert(5);
+    ss1.insert(5);
+    ss1.insert(1);
+    ss1.insert(6);
+    ss1.insert(6);
+    ss1.insert(6);
+    ss1.insert(6);
+    ss1.insert(0);
+
+
+    for (auto i: ss1){
+        cout<<i<<" ";
+    }
+    cout<<endl;
+
+    set<int> ::iterator it = ss.begin();
+    it++;
+    ss.erase(it);
+    for (auto i: ss){
+        cout<<i<<" ";
+    }
+    cout<<endl;
     
+
+    cout<<"5 is present: "<<ss.count(5)<<endl;
+    cout<<"-5 is present: "<<ss.count(-5)<<endl;
+
+    set<int>::iterator itr= ss.find(5);
+    for (auto it=itr;it!=ss.end();it++){
+        cout<<*it<<endl;
+    }
+
+
+
 }
