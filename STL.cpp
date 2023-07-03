@@ -6,6 +6,7 @@
 #include<stack>
 #include<queue>
 #include<set>
+#include<map>
 
 using namespace std;
 
@@ -191,7 +192,9 @@ int main()
     cout<<endl;
 
 
+
     //set
+
 
 
     set<int> ss;
@@ -239,6 +242,48 @@ int main()
         cout<<*it<<endl;
     }
 
+
+
+    //map
+
+
+    map<int,string> m;
+    
+    m[1]="IPS";
+    m[4]="IK";
+    m[3]="AK";
+    m[2]="GPS";
+    m.insert({5,"DD"});
+    for (auto i:m){
+        cout<<i.first<<" "<<i.second<<endl;
+    }
+
+    cout<<"Finding 3: "<<m.count(3)<<endl;
+    cout<<"Finding 13: "<<m.count(13)<<endl;
+
+    m.erase(4);
+
+    for (auto i:m){
+        cout<<i.first<<" "<<i.second<<endl;
+    }
+
+    auto it=m.find(3);
+    // for (auto i=it;i!=m.end();i++){
+    //     cout<<(*i).first<<endl;
+    // }
+    unordered_map<int,string> mm;
+    
+    mm[1]="IPS";
+    mm[4]="IK";
+    mm[3]="AK";
+    mm[2]="GPS";
+
+    for (auto i:mm){
+        cout<<i.first<<" "<<i.second<<endl;
+    }
+
+    cout<<"Finding 3: "<<mm.count(3)<<endl;
+    cout<<"Finding 13: "<<mm.count(13)<<endl;
 
 
 }
