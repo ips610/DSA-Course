@@ -1,6 +1,7 @@
 #include <iostream>
 #include <array>
 #include <vector>
+#include<deque>
 
 using namespace std;
 
@@ -25,7 +26,11 @@ int main()
     cout << "First Element: " << a.front() << endl;
     cout << "Last Element: " << a.back() << endl;
 
+
+
     // Vector
+
+
 
     vector<int> v;
     cout << "Size -> " << v.size() << endl;
@@ -65,4 +70,36 @@ int main()
     for (int i=0;i<v1.size();i++){
         cout<<v1[i]<<endl;
     }
+
+
+
+    //Deque
+
+
+    deque<int> d;
+    d.push_back(1);
+    d.push_front(2);
+    cout<<d.size()<<endl;
+    cout<<d.max_size()<<endl;
+    // cout<<d.__capacity()<<endl;
+
+    cout<<"Element at First Index: "<<d.at(1)<<endl;
+    cout<<"Empty or Not: "<<d.empty()<<endl;
+
+    for(int i:d){
+        cout<<i<<endl;
+    }
+    
+    cout<<d.size()<<endl;
+    cout<<d.max_size()<<endl;
+    // cout<<d.__capacity()<<endl;
+
+    d.erase(d.begin(), d.begin()+1);
+
+    for(int i:d){
+        cout<<i<<endl;
+    }
+    cout<<d.size()<<endl;
+    cout<<d.max_size()<<endl;
+    // cout<<d.__capacity()<<endl;
 }
