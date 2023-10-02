@@ -10,9 +10,9 @@ int main()
     for (int i = 1; i < n; i++)
     {
         int temp = arr[i];
-        int j = i - 1;
+        int j;
         
-        for (; j >= 0; j--)
+        for (j = i-1; j >= 0; j--)
         {
             if (arr[j] > temp)
             {
@@ -27,4 +27,9 @@ int main()
         }
         arr[j + 1] = temp;
     }
+
+    for (int i = 0; i<arr.size(); i++){
+        cout<<arr[i]<<" ";
+    }
+    cout << endl;
 }
