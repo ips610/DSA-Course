@@ -29,7 +29,7 @@ void InsertAtHead(Node *&head, int data)
     Node *temp = new Node(data);
     temp->next = head;
     head = temp;
-    delete temp;
+    // delete temp;
 }
 
 void InsertAtTail(Node *&tail, int data)
@@ -37,7 +37,7 @@ void InsertAtTail(Node *&tail, int data)
     Node *temp = new Node(data);
     tail->next = temp;
     tail = tail->next;
-    delete temp;
+    // delete temp;
 }
 
 void InsertAtPositon(Node *&head, Node *&tail, int pos, int data)
@@ -66,7 +66,7 @@ void InsertAtPositon(Node *&head, Node *&tail, int pos, int data)
     Node *newNode = new Node(data);
     newNode->next = temp->next;
     temp->next = newNode;
-    delete temp;
+    // delete temp;
     return;
 }
 
@@ -89,7 +89,7 @@ void DeleteAtPosition(Node* &head, int pos){
     if (pos == 0){
         head = head->next;
         curr->next = NULL;
-        delete curr;
+        // delete curr;
     }
 
 }
